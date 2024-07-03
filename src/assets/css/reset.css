@@ -10,7 +10,7 @@ a {
   display: inline-block;
 }
 ul {
-  list-style-type: none;
+  list-style: none;
 }
 table {
   width: 100%;
@@ -47,5 +47,5 @@ legend {
 }
 .row {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }

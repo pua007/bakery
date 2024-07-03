@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import Title from "@/components/common/Title";
 
-const StoreView = () => {
+const LoginView = () => {
   return (
     <div className="row">
-      <Title title="매장정보" />
+      <Title title="로그인" />
     </div>
   );
 };
 
-export default StoreView;
+export default LoginView;
