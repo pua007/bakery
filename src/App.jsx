@@ -12,21 +12,21 @@ import LoginView from "./views/LoginView";
 import JoinView from "./views/JoinView";
 
 const App = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomeView />}></Route>
-        <Route path="/cart" element={<CartView />}></Route>
-        <Route path="/employee" element={<EmployeeView />}></Route>
-        <Route path="/movie" element={<MovieView />}></Route>
-        <Route path="/detail" element={<ProductDtailView />}></Route>
-        <Route path="/product" element={<ProductView />}></Route>
-        <Route path="/store" element={<StoreView />}></Route>
-        <Route path="/join" element={<JoinView />}></Route>
-        <Route path="/login" element={<LoginView />}></Route>
-      </Route>
-    </Routes>
-  );
+    return (
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<HomeView />}></Route>
+                <Route path="/cart" element={<CartView />}></Route>
+                <Route path="/employee" element={<EmployeeView />}></Route>
+                <Route path="/movie" element={<MovieView />}></Route>
+                <Route path="/detail" element={<ProductDtailView />}></Route>
+                <Route path="/product" element={<ProductView />}></Route>
+                <Route path="/store" element={<StoreView />}></Route>
+                <Route path="/join" element={<JoinView />}></Route>
+                <Route path="/login" element={<LoginView />}></Route>
+            </Route>
+        </Routes>
+    );
 };
 
 export default App;
