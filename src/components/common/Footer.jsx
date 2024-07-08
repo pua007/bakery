@@ -1,68 +1,108 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Footerblock = styled.div`
+const FooterBlock = styled.div`
     background: #454a56;
     padding: 50px 0;
     color: #fff;
-    .row{
-      .company_nav{
-        border-bottom: 1px solid #fff;
-        padding-bottom:30px;
-        margin-bottom:30px;
-        a{
-          margin-right: 20px;
-          &:hover, &:focus{color: yellow;}
-        }
-      }
-      .company_info{
-        line-height:1.5rem;
-      }
+    @media screen and (max-width: 1024px) {
+        padding-top: 0px;
     }
-      
+    .row {
+        @media screen and (max-width: 1200px) {
+            padding: 0 20px;
+        }
+        @media screen and (max-width: 1024px) {
+            padding: 0px;
+        }
+        .company_nav {
+            border-bottom: 1px solid #fff;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            @media screen and (max-width: 1024px) {
+                border-bottom: 0px solid #fff;
+                padding-bottom: 0px;
+            }
+            a {
+                margin-right: 20px;
+                &:hover,
+                &:focus {
+                    color: yellow;
+                }
+                @media screen and (max-width: 1024px) {
+                    display: block;
+                    border-bottom: 1px solid #fff;
+                    margin-right: 0px;
+                    padding: 20px;
+                }
+            }
+        }
+        .company_info {
+            line-height: 1.5em;
+            @media screen and (max-width: 1024px) {
+                padding: 0 20px;
+            }
+            span {
+                position: relative;
+                padding-left: 20px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 5px;
+                    left: 7px;
+                    width: 1px;
+                    height: 12px;
+                    background: #fff;
+                }
+            }
+            @media screen and (max-width: 1024px) {
+                span {
+                    display: block;
+                    padding-left: 0px;
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 `;
 
 const Footer = () => {
     return (
-        <Footerblock>
+        <FooterBlock>
             <div className="row">
                 <div className="company_nav">
-                    <a href="#javascript:;">회사소개</a>
-                    <a href="#javascript:;">이용약관</a>
-                    <a href="3javascript:;">개인정보처리방침</a>
+                    <a href="#none">회사소개</a>
+                    <a href="#none">이용약관</a>
+                    <a href="#none">개인정보처리방침</a>
                     <a href="http://www.naver.com" target="_blank">
                         사업자정보확인
                     </a>
-                    <a href="#javascript:;">공지사항</a>
+                    <a href="#none">공지사항</a>
                 </div>
-                <div className="company_info"></div>
-                <p>
-                    (주)파리바게뜨 <span>대표: 이훈희, 이진성</span> | 04539
-                    서울특별시 중구 을지로5길 19, 26층(수하동) | 사업자등록번호:
-                    120-81-74197
-                </p>
-                <p>
-                    대표자: 트렁히엔트란, Khong May Wan Sharon | 통신판매업
-                    신고번호: 2021-서울중구-01116 | 사업자정보확{" "}
-                    <a href="mailto:alskdjfh@gmaile.com">
-                        이메일: alskdjfh@gmaile.com
-                    </a>
-                </p>
-                <p>
-                    고객 센터 : 02-3280-0104 (contactdiorkr@christiandior.com) |
-                    호스팅 서비스: Smile Hosting{" "}
-                    <a href="tel:070-5158-9176">전화번호:070-5158-9176</a>
-                    <span>이메일: alskdjfh@gmaile.com</span>
-                </p>
-                <p>
-                    COPYRIGHT © CHRISTIAN DIOR COUTURE KOREA ALL RIGHTS
-                    RESERVED.
-                </p>
-                <p>이니시스 구매안전 서비스 가입함</p>
+                <div className="company_info">
+                    <p>
+                        회사명 : (주)파리바게트{" "}
+                        <span>대표 : 이훈희, 이진성</span>
+                    </p>
+                    <p>
+                        주소 : 서울시 강남구 삼성로146길 4-5 스타쉽ENT (06070)
+                    </p>
+                    <p>
+                        전화번호 : <a href="tel:070-5158-9176">070-5158-9176</a>{" "}
+                        <span>이메일 : chamsogum@gmail.com</span>
+                    </p>
+                    <p>
+                        개인정보책임자 서승연 /{" "}
+                        <a href="mailto:chamsogum@gmail.com">
+                            chamsogum@gmail.com
+                        </a>
+                    </p>
+                    <p>Copyright Paris Baguette. All rights reserved.</p>
+                </div>
             </div>
-        </Footerblock>
+        </FooterBlock>
     );
 };
 
